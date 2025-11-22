@@ -19,7 +19,11 @@
 	</nav>
 </header>
 
-{@render children()}
+<main>
+
+	{@render children()}
+
+</main>
 
 <footer>
 	&copy; {new Date().getFullYear()} ConcertPub
@@ -65,6 +69,10 @@
 
 	.nav__link.active {
 		border-bottom: solid 2px var(--primary-color);
+	}
+
+	main {
+		min-height: calc(100vh - 220px);
 	}
 
 </style>

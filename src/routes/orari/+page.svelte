@@ -4,6 +4,17 @@
     <br>
     <p>Per eventi speciali o concerti, potrebbe osservare aperture straordinarie.</p>
 
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <iframe class="contact-map" title="Mappa" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAUASn76CLfZ-7nLl8Z-uoqN-rHr7TpXkA&amp;q=Piazzetta Morosi 4, Pavia" frameborder="0" style="border:0;"></iframe>
 
 </div>
+
+<style>
+
+    .contact-map {
+        border-radius: 10px;
+        width: 100%;
+        height: 300px;
+        margin-top: 30px;
+    }
+
+</style>
