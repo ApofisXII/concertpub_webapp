@@ -8,6 +8,8 @@
 </script>
 
 <svelte:head>
+	<title>ConcertPub</title>
+	<meta name="description" content="Pub della camera #110 in Piazza Morosi 4 a Pavia" />
 	<link rel="icon" href={favicon} />
 </svelte:head>
 
