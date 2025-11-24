@@ -2,7 +2,7 @@
 	import '$lib/styles/app.css';
 	import { page } from '$app/state';
 	import logotipo from '$lib/images/logotipo-concertpub.webp';
-	import favicon from '$lib/assets/favicon.svg';
+	import favicon from '$lib/assets/favicon-concertpub.png';
 	import { fade } from 'svelte/transition';
 
 	let { children } = $props();
