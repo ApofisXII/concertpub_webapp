@@ -2,7 +2,7 @@
 	import Food from '$lib/components/Food.svelte';
     import { categories } from '$lib/database/categories';
 	import { MenuEntry } from '$lib/models/menu-entry';
-    import { Search } from '@lucide/svelte/icons';
+    import { Search, X } from '@lucide/svelte/icons';
 
     // Fill database with products
     let products :MenuEntry[] = $state<MenuEntry[]>([]);
@@ -27,16 +27,25 @@
         }
     });
 
+    function resetSearch() {
+        searchText = "";
+    }
+
 </script>
 
 <div class="container">
     <h1>Menu</h1>
 
     <div class="search">
-        <input class="search__input" bind:value={searchText} placeholder="Cerca nel menu..." type="text" id="input-search">
         <div class="search__icon">
             <Search />
         </div>
+        <input class="search__input" bind:value={searchText} placeholder="Cerca nel menu..." type="text" id="input-search">
+        {#if searchText.length > 0}
+            <button class="search__close-btn" onclick={resetSearch}>
+                <X />
+            </button>            
+        {/if}
     </div>
 
     {#if searchText.length > 0}
@@ -99,18 +108,28 @@
         display: flex;
         align-items: center;
         justify-content: flex-start;
-        gap: 10px;
+        gap: 5px;
         background-color: white;
         border-radius: 10px;
         padding: 10px 15px;
-        border: solid 1px #ccc;
         margin-bottom: 15px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.07);
     }
 
     .search__input {
         width: 100%;
         border: none;
         padding: 5px;
+    }
+
+    .search__icon {
+        opacity: 0.4;
+    }
+
+    .search__close-btn {
+        background: none;
+        border: none;
+        cursor: pointer;
     }
 
 </style>
