@@ -15,7 +15,7 @@
 </svelte:head>
 
 <header>
-	<div><img src={logotipo} alt="ConcertPub Logo" class="header__logo" /></div>
+	<a href="/"><img src={logotipo} alt="ConcertPub Logo" class="header__logo" /></a>
 	<nav>
 		<a class="nav__link" class:active={page.url.pathname === '/'} href="/">Home</a>
 		<a class="nav__link" class:active={page.url.pathname === '/orari'} href="/orari">Orari</a>
@@ -23,7 +23,7 @@
 </header>
 
 {#key page.url.pathname}
-	<main in:fade={{ delay: 200 }} out:fade={{ duration: 180 }}>
+	<main in:fade={{ delay: 80 }} out:fade={{ duration: 70 }}>
 		{@render children()}
 	</main>
 {/key}

@@ -13,8 +13,11 @@
     import(`../../../lib/database/${category.slug}.ts`).then(foodsModule => {
         foods = foodsModule.foods;
     });
-
 </script>
+
+<svelte:head>
+    <title>{category.title} - ConcertPub</title>
+</svelte:head>
 
 <div class="container">
 
