@@ -1,4 +1,5 @@
 <script lang="ts">  
+	import Food from '$lib/components/Food.svelte';
     import { categories } from '$lib/database/categories.ts';
     import type { Category } from '$lib/models/category.ts';
 	import type { MenuEntry } from '$lib/models/menu-entry.ts';
@@ -28,18 +29,7 @@
     <h1>{category.title}</h1>
 
     {#each foods as food}
-        <div class="food">
-            {#if food.imagePath}
-                <div class="food__image-container">
-                    <img src="/food-images/{food.imagePath}" alt="Immagine cibo" class="food__image">
-                </div>
-            {/if}
-            <div class="food__details">
-                <div class="food__title">{food.title}</div>
-                {#if food.description}<div class="food__description">{food.description}</div>{/if}
-                <div class="food__price">{food.getPriceFormatted()}</div>
-            </div>
-        </div>
+        <Food {food} />
     {/each}
 
 </div>

@@ -8,4 +8,6 @@ export const foods: MenuEntry[] = [
     new MenuEntry("Urquel Pils", 130, "PILS • 4,4% vol • 330ml", 'urquel.png'),
     new MenuEntry("Chimai - Rouge", 230, "Belgian Strong • 7% vol • 330ml", 'chimai.jpeg'),
     new MenuEntry("Leffe Ambrata", 190, "Belgian Blonde • 6,6 vol • 330ml", 'leffe-ambrata.jpg'),
+    new MenuEntry("Delirium Tremens", 309, "Strong Blonde • 8,5 vol • 330ml", 'delirium-tremens.webp'),
+    new MenuEntry("Grimbergen Double Ambrée", 190, "Belgian Dubbel • 6,5 vol • 330ml", 'grimbergen-ambree.png'),
 ];
