@@ -3,6 +3,7 @@
 	import { page } from '$app/state';
 	import logotipo from '$lib/images/logotipo-concertpub.webp';
 	import favicon from '$lib/assets/favicon.svg';
+	import { fade } from 'svelte/transition';
 
 	let { children } = $props();
 </script>
@@ -21,11 +22,11 @@
 	</nav>
 </header>
 
-<main>
-
-	{@render children()}
-
-</main>
+{#key page.url.pathname}
+	<main in:fade={{ delay: 200 }} out:fade={{ duration: 180 }}>
+		{@render children()}
+	</main>
+{/key}
 
 <footer>
 	&copy; {new Date().getFullYear()} ConcertPub
