@@ -45,49 +45,5 @@
 </div>
 
 <style>
-    .food {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        margin-bottom: 15px;
-        padding: 15px;
-        border-radius: 20px;
-        background: white;
-        gap: 10px;
-    }
-
-    .food__image-container {
-        min-width: 80px;
-        text-align: center;
-    }
-
-    .food__image {
-        max-width: 80px;
-        max-height: 80px;
-        border-radius: 10px;
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-    }
-
-    .food__title {
-        font-weight: bold;
-        font-size: 1em;
-        margin-bottom: 5px;
-    }
-
-    .food__description {
-        font-size: 0.8rem;
-        opacity: 0.6;
-        margin-bottom: 5px;
-    }
-
-    .food__price {
-        color: var(--primary-color);
-    }
-
-    .food__details {
-        width: 100%;
-    }
-
+    
 </style>

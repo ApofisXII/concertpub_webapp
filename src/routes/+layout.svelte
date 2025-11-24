@@ -3,7 +3,7 @@
 	import { page } from '$app/state';
 	import logotipo from '$lib/images/logotipo-concertpub.webp';
 	import favicon from '$lib/images/favicon-concertpub.png';
-	import { fade } from 'svelte/transition';
+	import { blur } from 'svelte/transition';
 
 	let { children } = $props();
 </script>
@@ -23,7 +23,7 @@
 </header>
 
 {#key page.url.pathname}
-	<main in:fade={{ delay: 80 }} out:fade={{ duration: 70 }}>
+	<main in:blur={{ delay: 100 }} out:blur={{ duration: 90 }}>
 		{@render children()}
 	</main>
 {/key}
