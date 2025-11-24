@@ -1,5 +1,5 @@
 import { Beer, Pizza, Utensils, Popsicle } from "@lucide/svelte";
-import { Category } from "../models/category";
+import { Category } from "$lib/models/category";
 
 export const categories: Category[] = [
     new Category(Beer, 'bottle-beers', 'Birre in bottiglia', 'Accontentano anche i bevitori più esotici'),

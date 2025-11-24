@@ -1,16 +1,13 @@
 <script lang="ts">
 	import Food from '$lib/components/Food.svelte';
-    import { categories } from '$lib/database/categories';
 	import { MenuEntry } from '$lib/models/menu-entry';
     import { Search, X } from '@lucide/svelte/icons';
+    import type { PageProps } from './$types';
+    import { categories } from '$lib/database/categories';
 
     // Fill database with products
-    let products :MenuEntry[] = $state<MenuEntry[]>([]);
-    categories.forEach(function (category) {
-        import(`../lib/database/${category.slug}.ts`).then(foodsModule => {
-            products = [...products, ...foodsModule.foods];
-        });
-    });
+    let { data }: PageProps = $props();
+    let products: MenuEntry[] = data.products.map((prod: any) => MenuEntry.fromJson(prod));
 
     let filteredProducts :MenuEntry[] = $state<MenuEntry[]>([]);
     let searchText = $state("");

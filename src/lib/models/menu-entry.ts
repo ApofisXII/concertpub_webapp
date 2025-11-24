@@ -14,4 +14,22 @@ export class MenuEntry {
     getPriceFormatted(): string {
         return (this.priceCents / 100).toFixed(2).replace('.', ',') + " €";
     }
+
+    toJSON () {
+        return {
+            title: this.title,
+            priceCents: this.priceCents,
+            description: this.description,
+            imagePath: this.imagePath  
+         }
+    }
+
+    static fromJson (json: any) :MenuEntry {
+        return new MenuEntry(
+            json.title,
+            json.priceCents,
+            json.description,
+            json.imagePath
+        );
+    }
 }

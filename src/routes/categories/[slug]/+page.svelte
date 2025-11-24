@@ -2,18 +2,16 @@
 	import Food from '$lib/components/Food.svelte';
     import { categories } from '$lib/database/categories.ts';
     import type { Category } from '$lib/models/category.ts';
-	import type { MenuEntry } from '$lib/models/menu-entry.ts';
-    let { params } = $props();
+	import { MenuEntry } from '$lib/models/menu-entry.ts';
+	import type { PageProps } from './$types.js';
+    let { params, data }: PageProps = $props();
 
     let category: Category | undefined = categories.find(cat => cat.slug === params.slug);
     if (!category) {
         throw new Error(`Category with slug "${params.slug}" not found.`);
     }
 
-    let foods: MenuEntry[] = $state([]);
-    import(`../../../lib/database/${category.slug}.ts`).then(foodsModule => {
-        foods = foodsModule.foods;
-    });
+    let foods: MenuEntry[] = data.products.map((prod: any) => MenuEntry.fromJson(prod));
 </script>
 
 <svelte:head>
@@ -33,7 +31,3 @@
     {/each}
 
 </div>
-
-<style>
-    
-</style>
