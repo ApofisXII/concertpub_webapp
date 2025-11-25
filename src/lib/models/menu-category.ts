@@ -1,7 +1,7 @@
 import type { Icon } from "@lucide/svelte";
 import type { Component } from "svelte";
 
-class Category {
+class MenuCategory {
     icon: Component<Icon>;
     slug: string;
     title: string
@@ -15,4 +15,4 @@ class Category {
     }
 }
 
-export { Category };
+export { MenuCategory };

@@ -1,9 +1,9 @@
 import { Beer, Pizza, Utensils, Popsicle } from "@lucide/svelte";
-import { Category } from "$lib/models/category";
+import { MenuCategory } from "$lib/models/menu-category";
 
-export const categories: Category[] = [
-    new Category(Beer, 'bottle-beers', 'Birre in bottiglia', 'Accontentano anche i bevitori più esotici'),
-    new Category(Pizza, 'bites', 'Stuzzicherie', 'Per una voglia colpevole di frittini'),
-    new Category(Utensils, 'plates', 'Piatti', 'Certo, ci crediamo tutti che non hai cenato...'),
-    new Category(Popsicle, 'desserts', 'Dolcini', 'Per chiudere in dolcezza'),
+export const categories: MenuCategory[] = [
+    new MenuCategory(Beer, 'bottle-beers', 'Birre in bottiglia', 'Accontentano anche i bevitori più esotici'),
+    new MenuCategory(Pizza, 'bites', 'Stuzzicherie', 'Per una voglia colpevole di frittini'),
+    new MenuCategory(Utensils, 'plates', 'Piatti', 'Certo, ci crediamo tutti che non hai cenato...'),
+    new MenuCategory(Popsicle, 'desserts', 'Dolcini', 'Per chiudere in dolcezza'),
 ];

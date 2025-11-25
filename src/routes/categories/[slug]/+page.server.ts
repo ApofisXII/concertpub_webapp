@@ -1,6 +1,6 @@
 import type { MenuEntry } from "$lib/models/menu-entry";
 import { categories } from "$lib/database/categories";
-import type { Category } from "$lib/models/category";
+import type { Category } from "$lib/models/menu-category";
 
 export async function load({ params }) {
     let category: Category | undefined = categories.find(cat => cat.slug === params.slug);
